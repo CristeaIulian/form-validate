@@ -1,2 +1,2 @@
 # form-validate
-An Javascript Angular module for validation forms
+An Angular module for validation forms
