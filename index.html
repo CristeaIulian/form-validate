@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="requirements/bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="form-validate-0.1.css" />
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myController">
+
+	<div style="padding:20px;  width:600px;">
+
+		<form action="" method="post" form-validate="inline"> <!-- inline, header, popup -->
+
+			<div class="hidden">You should not see me if you use bootstrap.</div>
+			
+			<div class="form-validate-errors"></div>
+
+			<div class="form-validate-popup"></div>
+
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Name:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="name" validate="mandatory,minlength:2,maxlength:5" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Email:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="email" validate="mandatory,email" validate-message="Email" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Web:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="web" validate="web" validate-message="Web" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">IP:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="ip" validate="ip" validate-message="IP" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Age:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="age" validate="integer,min:18,max:50" validate-message="Age" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Salary:</label></div>
+				<div class="col-md-6"><input type="text" class="form-control" ng-model="salary" validate="float,min:100,max:100000" validate-message="Salary" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Password:</label></div>
+				<div class="col-md-6"><input type="password" class="form-control" ng-model="password" validate="mandatory,match:password_repeat,minlength:5,must_have_specials" validate-message="Password" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Repeat Password:</label></div>
+				<div class="col-md-6"><input type="password" class="form-control" ng-model="password_repeat" validate="mandatory,match:password,minlength:5,must_have_specials" validate-message="Repeat password" /></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Message:</label></div>
+				<div class="col-md-6"><textarea class="form-control" ng-model="message" validate="mandatory,minlength:5" validate-message="Message"></textarea></div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">Receive NL:</label></div>
+				<div class="col-md-6">
+					<input type="radio" ng-model="receive_nl" validate="mandatory" validate-message="Receive newsletter" value="yes" /> <span>Yes</span><br />
+					<input type="radio" ng-model="receive_nl" validate="mandatory" validate-message="Receive newsletter" value="no" /> <span>No</span>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"><label class="control-label">City:</label></div>
+				<div class="col-md-6">
+					<select 
+						class="form-control" 
+						ng-model="city" 
+						validate="mandatory" 
+						validate-message="City"
+						ng-options="key as value for (key, value) in cities"
+					></select>
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-3"></div>
+				<div class="col-md-6"><input type="submit" class="btn btn-primary" value="Submit" /></div>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<script type="text/javascript" src="requirements/angular-1.4.0-rc.2.min.js"></script>
+<script type="text/javascript" src="requirements/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="myApp.js"></script>
+<script type="text/javascript" src="form-validate-0.1.min.js"></script>
+<script type="text/javascript" src="myController.js"></script>
+
+</body>
+</html>
