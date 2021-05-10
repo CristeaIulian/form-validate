@@ -1,5 +1,5 @@
 # form-validate
-An Angular module for validation forms
+An Angular module for forms validations
 
 # Requirements
 Bootstrap
