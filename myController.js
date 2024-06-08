@@ -18,9 +18,9 @@ myApp.controller('myController', function($scope) {
 	};
 
 	$scope.onSubmit = function(validaForm){
-// xLog($scope.FV, 'from controller')
+
 		if (validaForm){
-			xLog('Hurray! Now you can do whatever you like.')
+			console.log('Hurray! Now you can do whatever you like.')
 		}
 		console.log('Controller - Valid form :: ' + validaForm);
 	}
