@@ -1,7 +1,7 @@
 /*
 Form Validate 0.1 under Angular
 Requirements
-	* jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license
+	* jQuery v3.7.1 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license
 	* Bootstrap v3.3.4 (http://getbootstrap.com)
 (c) 2006-2015 Memobit.ro
 License: MIT
